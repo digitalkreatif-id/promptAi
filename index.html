@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PromptAI – Video/Story Scene Generator</title>
+    <!-- Google Font: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="top-bar">
+      <h1>PromptAI – Scene Prompt Generator</h1>
+    </header>
+
+    <main class="container">
+      <form id="promptForm" class="card form-card">
+        <h2>Input Detail Scene</h2>
+
+        <label>
+          <span>1. Judul Scene</span>
+          <input type="text" id="judul" required />
+        </label>
+
+        <label>
+          <span>2. Pergerakan Kamera</span>
+          <select id="kamera">
+            <option value="static">Static</option>
+            <option value="pan">Pan</option>
+            <option value="tilt">Tilt</option>
+            <option value="zoom">Zoom</option>
+            <option value="dolly">Dolly</option>
+            <option value="tracking">Tracking</option>
+            <option value="handheld">Handheld</option>
+            <option value="drone">Drone</option>
+          </select>
+        </label>
+
+        <label>
+          <span>3. Gaya Video</span>
+          <select id="gaya">
+            <option value="cinematic">Cinematic</option>
+            <option value="vlog">Vlog</option>
+            <option value="dokumenter">Dokumenter</option>
+            <option value="animasi">Animasi</option>
+            <option value="sinetron">Sinetron</option>
+            <option value="iklan">Iklan</option>
+            <option value="pendek">Pendek</option>
+            <option value="edukatif">Edukatif</option>
+          </select>
+        </label>
+
+        <label>
+          <span>4. Deskripsi Karakter</span>
+          <textarea id="karakter" rows="2"></textarea>
+        </label>
+
+        <label>
+          <span>5. Detail Suara Karakter</span>
+          <textarea id="suaraKarakter" rows="2"></textarea>
+        </label>
+
+        <label>
+          <span>6. Aksi Karakter</span>
+          <textarea id="aksi" rows="2"></textarea>
+        </label>
+
+        <label>
+          <span>7. Ekspresi Karakter</span>
+          <textarea id="ekspresi" rows="2"></textarea>
+        </label>
+
+        <label>
+          <span>8. Latar Tempat &amp; Waktu</span>
+          <textarea id="latar" rows="2"></textarea>
+        </label>
+
+        <label>
+          <span>9. Suasana Keseluruhan</span>
+          <textarea id="suasana" rows="2"></textarea>
+        </label>
+
+        <label>
+          <span>10. Suara Lingkungan</span>
+          <textarea id="suaraLingkungan" rows="2"></textarea>
+        </label>
+
+        <label>
+          <span>11. Dialog Karakter</span>
+          <textarea id="dialog" rows="2"></textarea>
+        </label>
+
+        <label>
+          <span>12. Detail Visual Tambahan</span>
+          <textarea id="visual" rows="2"></textarea>
+        </label>
+
+        <label>
+          <span>13. Negative Prompt</span>
+          <textarea id="negative" rows="2"></textarea>
+        </label>
+
+        <div class="button-group">
+          <button type="submit" class="btn-primary">🎬 Generate Prompt</button>
+          <button type="button" id="resetBtn" class="btn-secondary">🔄 Reset</button>
+          <button type="button" id="saveBtn" class="btn-secondary">💾 Simpan</button>
+          <button type="button" id="shareBtn" class="btn-icon" title="Share">📤</button>
+        </div>
+      </form>
+
+      <section id="outputSection" class="output-container hidden">
+        <h2>Hasil Prompt</h2>
+        <div class="output-columns">
+          <div class="column">
+            <h3>Bahasa Indonesia (editable)</h3>
+            <textarea id="outputID" rows="6" class="output-textarea"></textarea>
+          </div>
+          <div class="column">
+            <h3>English (readonly)</h3>
+            <textarea id="outputEN" rows="6" class="output-textarea" readonly></textarea>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      © <a href="https://digitalkreatif.id" target="_blank" rel="noopener">Digital Kreatif</a>
+    </footer>
+
+    <!-- Script -->
+    <script src="script.js"></script>
+  </body>
+</html> 
