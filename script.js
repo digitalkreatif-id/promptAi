@@ -1,7 +1,7 @@
 /* PromptAI – Scene Prompt Generator */
 (() => {
   // ====== Configuration ======
-  const API_KEY = "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";
+  const API_KEY = "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";
   const API_URL = "https://api.openai.com/v1/chat/completions";
   const LOCAL_KEY = "promptAI-data";
 
